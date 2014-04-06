@@ -12,7 +12,8 @@
   "dependencies": {
     "through": "~2.3.4",
     "less": "~1.5.1",
-    "cssify": "git://github.com/ahdinosaur/cssify"
+    "cssify": "git://github.com/ahdinosaur/cssify",
+    "autoprefixer": "^1.1.20140403"
   },
   "devDependencies": {
     "tape": "~2.1.0"

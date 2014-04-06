@@ -1,6 +1,7 @@
 var less = require("less")
   , through = require('through')
-  , path = require('path');
+  , path = require('path')
+  , autoprefixer = require('autoprefixer');
 
 module.exports = function(file) {
   var input = '';
@@ -13,6 +14,7 @@ module.exports = function(file) {
     var self = this;
 
     function jsToLoad(css) {
+      css = autoprefixer.process(css).css;
       return "var css = "+ JSON.stringify(css) +";"+ 
              "(require('lessify'))(css); module.exports = css;";
     }
